@@ -40,6 +40,13 @@ def contar_por_faixa(livros):
 
     return contagem
 
+def buscar_por_titulo(livros, busca):
+    """Devolve uma lista nova só com os livros cujo título contém o texto buscado."""
+    encontrados = []
+    for livro in livros:
+        if busca in livro["titulo"]:
+            encontrados.append(livro)
+    return encontrados
 
 def main():
     st.set_page_config(page_title="Dashboard de Livros", page_icon="📚", layout="wide")
